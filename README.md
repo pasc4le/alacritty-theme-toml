@@ -14,15 +14,14 @@ Clone the repository, or download the theme of your choice:
 ```sh
 # We use Alacritty's default Linux config directory as our storage location here.
 mkdir -p ~/.config/alacritty/themes
-git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+git clone https://github.com/pasc4le/alacritty-theme-toml ~/.config/alacritty/themes
 ```
 
-Add an import to your `alacritty.yml` (Replace `{theme}` with your desired
+Add an import to your `alacritty.toml` (Replace `{theme}` with your desired
 colorscheme):
 
-```yaml
-import:
- - ~/.config/alacritty/themes/themes/{theme}.yaml
+```toml
+import = ["~/.config/alacritty/themes/themes/{theme}.toml"]
 ```
 
 ### Manual
@@ -135,10 +134,10 @@ repository.
 
 To add a new theme, just create a Pull Request with the following changes:
 
- - Add your theme to the `themes` directory with the `{theme}.yaml` file format
+ - Add your theme to the `themes` directory with the `{theme}.toml` file format
  - Create a screenshot of your theme using the [`print_colors.sh`](./print_colors.sh) script
  - Add the screenshot to the `images` directory with the `{theme}.png` file format
- - Add your theme to the `schemes.yaml`
+ - Add your theme to the `schemes.toml`
  - Add your theme to the `README.md`, following alphabetical ordering
 
 ## Maintainers
